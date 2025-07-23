@@ -3,8 +3,11 @@
 # Português
 
 Este repositório estima a configuração ótima de um sistema fotovoltaico (PV) com base nos métodos e modelos descritos no artigo:
+
 "XXXX"
+
 DOI: [inserir DOI aqui]
+
 Para mais detalhes sobre a metodologia, premissas e validações, consulte a publicação original.
 
 Se você estiver utilizando este repositório para fins acadêmicos ou de pesquisa, por favor, cite o artigo original da seguinte forma:
@@ -24,11 +27,14 @@ Considere entrar em contato com os autores ou mantenedores para oportunidades de
 # English
 
 This repository estimates the optimal PV system configuration based on the methods and models described in the article:
+
 "XXXX"
 DOI: [insert DOI here]
+
 For full details on methodology, assumptions, and validation, please consult the original publication.
 
 If you are using this repository for academic or research purposes, please cite the original article as follows:
+
 Citation
 
 This repository is distributed under the MIT License, which permits commercial use. However, we ask that you:
