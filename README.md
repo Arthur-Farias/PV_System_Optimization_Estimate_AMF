@@ -29,6 +29,7 @@ Considere entrar em contato com os autores ou mantenedores para oportunidades de
 This repository estimates the optimal PV system configuration based on the methods and models described in the article:
 
 "XXXX"
+
 DOI: [insert DOI here]
 
 For full details on methodology, assumptions, and validation, please consult the original publication.
