@@ -14,7 +14,7 @@ import pandas as pd
 
 
 '''Altere path para o seu diretório'''
-path = r'P:\Hidrogenio_CNPq\04_Arthur\Periodico\Periodico'
+path = r'C:\User\...'
 
 opt_system_size_file = rf"{path}\svr_model_OPT_SYSTEM_SIZE.pkl"
 opt_LCS_file         = rf"{path}\svr_model_LCS.pkl"
@@ -29,7 +29,7 @@ opt_inclination = joblib.load(opt_inclination_file)
 
 
 
-'''Modifique o exemplo abaixo apenas onde é indicado para fazer as estimativas dos parâmetros ótimos no seu caso'''
+'''Modifique o exemplo abaixo apenas onde é indicado com um comment (#) para fazer as estimativas dos parâmetros ótimos no seu caso'''
 
 
 estimativas = pd.DataFrame(columns = ['LAT', 
