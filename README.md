@@ -1,6 +1,6 @@
 # PV_System_Optimization_Estimate_AMF
 
-# Portuguese
+# Português
 
 Este repositório estima a configuração ótima de um sistema fotovoltaico (PV) com base nos métodos e modelos descritos no artigo:
 "XXXX"
