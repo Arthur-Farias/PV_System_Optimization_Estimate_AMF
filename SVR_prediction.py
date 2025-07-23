@@ -48,19 +48,19 @@ estimativas = pd.DataFrame(columns = ['LAT',
 
 localizacao = 'Florianópolis' # Modifique aqui o nome da sua localização
 
-estimativas.loc[localizacao, 'LAT']  = -27.6   # Insira a Latitude desejada
+estimativas.loc[localizacao, "LAT"]  = -27.6   # Insira a Latitude desejada
 
-estimativas.loc[localizacao, 'LONG'] = -48.6 # Insira a Longitude desejada
+estimativas.loc[localizacao, "LONG"] = -48.6 # Insira a Longitude desejada
 
-estimativas.loc[localizacao, 'MEAN_ANUAL_IR_LAT_POA'] = 5.51  # Insira a Irradiação média anual no plano inclinado na latitude local em (kWh/m2/dia). 
+estimativas.loc[localizacao, "MEAN_ANUAL_IR_LAT_POA"] = 5.51  # Insira a Irradiação média anual no plano inclinado na latitude local em (kWh/m2/dia). 
                                                               # Dica: Pode-se achar esse dado para qualquer localidade do Brasil na pg. 41 do livro "Atlas Brasileiro de Energia Solar - 2ª Edição (2017)", disponível em pdf em https://labren.ccst.inpe.br/atlas_2017.html
 
-estimativas.loc[localizacao, 'TARIFA_TOTAL'] = 0.7 # Insira a tarifa de energia em R$/kWh. Recomendado incluir a tarifa registrada na sua conta de luz.
+estimativas.loc[localizacao, "TARIFA_TOTAL"] = 0.7 # Insira a tarifa de energia em R$/kWh. Recomendado incluir a tarifa registrada na sua conta de luz.
 
-estimativas.loc[localizacao, 'TARIFA_FIOB']  = 0.123 # Insira a tarifa do Fio B em R$/kWh. 
+estimativas.loc[localizacao, "TARIFA_FIOB"]  = 0.123 # Insira a tarifa do Fio B em R$/kWh. 
                                                      # Dica: É possível encontrar o valor dessa tarifa em "Base de Dados das Tarifas das Distribuidoras de Energia Elétrica", disponível em https://portalrelatorios.aneel.gov.br/luznatarifa/basestarifas
 
-estimativas.loc[localizacao, 'DEMANDA_MENSAL'] = 700 # Insira o gasto mensal de energia em kWh.
+estimativas.loc[localizacao, "DEMANDA_MENSAL"] = 700 # Insira o gasto mensal de energia em kWh.
 
 
 '''Rode o código e os resultados serão printados no console.'''
@@ -88,53 +88,53 @@ estimativas.loc[localizacao, 'DPT'] = opt_DPT.predict(indicators_parameters)[0]
 estimativas.loc[localizacao, 'OPT_INCLINATION'] = opt_inclination.predict(inclination_parameters)[0]
 
 
-if estimativas.loc[localizacao, 'LAT'] < -34:
-    print('\n')
-    print(f'Rever Latitude. A latitude {estimativas.loc[localizacao, 'LAT']}° está fora do território Brasileiro.')
+if estimativas.loc[localizacao, "LAT"] < -34:
+    print("\n")
+    print(f"Rever Latitude. A latitude {estimativas.loc[localizacao, "LAT"]}° está fora do território Brasileiro.")
 
-elif estimativas.loc[localizacao, 'LAT'] > 6:
-    print('\n')
-    print(f'Rever Latitude. A latitude {estimativas.loc[localizacao, 'LAT']}° está fora do território Brasileiro.')
+elif estimativas.loc[localizacao, "LAT"] > 6:
+    print("\n")
+    print(f"Rever Latitude. A latitude {estimativas.loc[localizacao, "LAT"]}° está fora do território Brasileiro.")
     
-elif estimativas.loc[localizacao, 'LONG'] > -32:
-    print('\n')
-    print(f'Rever Longitude. A longitude {estimativas.loc[localizacao, 'LONG']}° está fora do território Brasileiro.')
+elif estimativas.loc[localizacao, "LONG"] > -32:
+    print("\n")
+    print(f"Rever Longitude. A longitude {estimativas.loc[localizacao, "LONG"]}° está fora do território Brasileiro.")
 
-elif estimativas.loc[localizacao, 'LONG'] < -74:
-    print('\n')
-    print(f'Rever Longitude. A longitude {estimativas.loc[localizacao, 'LONG']}° está fora do território Brasileiro.')
+elif estimativas.loc[localizacao, "LONG"] < -74:
+    print("\n")
+    print(f"Rever Longitude. A longitude {estimativas.loc[localizacao, "LONG"]}° está fora do território Brasileiro.")
 
-elif estimativas.loc[localizacao, 'MEAN_ANUAL_IR_LAT_POA'] > 7:
-    print('\n')
-    print(f'Rever Irradiação. A irradiação {estimativas.loc[localizacao, 'MEAN_ANUAL_IR_LAT_POA']} está muito alta. Checkar unidades. O input deve estar em kWh/m2/dia não Wh/m2/dia.')
+elif estimativas.loc[localizacao, "MEAN_ANUAL_IR_LAT_POA"] > 7:
+    print("\n")
+    print(f"Rever Irradiação. A irradiação {estimativas.loc[localizacao, "MEAN_ANUAL_IR_LAT_POA"]} está muito alta. Checkar unidades. O input deve estar em kWh/m2/dia não Wh/m2/dia.")
     
-elif estimativas.loc[localizacao, 'MEAN_ANUAL_IR_LAT_POA'] < 0:
-    print('\n')
-    print(f'Rever Irradiação. A irradiação {estimativas.loc[localizacao, 'MEAN_ANUAL_IR_LAT_POA']} está negativa.')
+elif estimativas.loc[localizacao, "MEAN_ANUAL_IR_LAT_POA"] < 0:
+    print("\n")
+    print(f"Rever Irradiação. A irradiação {estimativas.loc[localizacao, "MEAN_ANUAL_IR_LAT_POA"]} está negativa.")
 
-elif estimativas.loc[localizacao, 'TARIFA_TOTAL'] > 1.2:
-    print('\n')
-    print(f'Rever tarifa de energia. A tarifa de energia {estimativas.loc[localizacao, 'TARIFA_TOTAL']} R$/kWh está muito alta, limite máximo recomendado é 1.2 R$/kWh')
+elif estimativas.loc[localizacao, "TARIFA_TOTAL"] > 1.2:
+    print("\n")
+    print(f"Rever tarifa de energia. A tarifa de energia {estimativas.loc[localizacao, "TARIFA_TOTAL"]} R$/kWh está muito alta, limite máximo recomendado é 1.2 R$/kWh")
     
-elif estimativas.loc[localizacao, 'TARIFA_TOTAL'] < 0.7:
-    print('\n')
-    print(f'Rever tarifa de energia. A tarifa de energia de {estimativas.loc[localizacao, 'TARIFA_TOTAL']} R$/kWh está muito baixa, limite mínimo recomendado é 0.7 R$/kWh')
+elif estimativas.loc[localizacao, "TARIFA_TOTAL"] < 0.7:
+    print("\n")
+    print(f"Rever tarifa de energia. A tarifa de energia de {estimativas.loc[localizacao, "TARIFA_TOTAL"]} R$/kWh está muito baixa, limite mínimo recomendado é 0.7 R$/kWh")
 
-elif estimativas.loc[localizacao, 'TARIFA_FIOB'] > 0.4:
-    print('\n')
-    print(f'Rever tarifa do fio b. A tarifa do fio b de {estimativas.loc[localizacao, 'TARIFA_FIOB']} R$/kWh está muito alta, limite máximo recomendado é 0.4 R$/kWh')
+elif estimativas.loc[localizacao, "TARIFA_FIOB"] > 0.4:
+    print("\n")
+    print(f"Rever tarifa do fio b. A tarifa do fio b de {estimativas.loc[localizacao, "TARIFA_FIOB"]} R$/kWh está muito alta, limite máximo recomendado é 0.4 R$/kWh")
 
-elif estimativas.loc[localizacao, 'TARIFA_FIOB'] < 0.1:
-    print('\n')
-    print(f'Rever tarifa do fio b. A tarifa do fio b de {estimativas.loc[localizacao, 'TARIFA_FIOB']} R$/kWh está muito baixa, limite mínimo recomendado é 0.1 R$/kWh')  
+elif estimativas.loc[localizacao, "TARIFA_FIOB"] < 0.1:
+    print("\n")
+    print(f"Rever tarifa do fio b. A tarifa do fio b de {estimativas.loc[localizacao, "TARIFA_FIOB"]} R$/kWh está muito baixa, limite mínimo recomendado é 0.1 R$/kWh")  
 
-elif estimativas.loc[localizacao, 'DEMANDA_MENSAL'] > 700:
-    print('\n')
-    print(f'Rever Demanda mensal. A demanda mensal de {estimativas.loc[localizacao, 'DEMANDA_MENSAL']} kWh está muito alta, limite máximo recomendado é 700 kWh')
+elif estimativas.loc[localizacao, "DEMANDA_MENSAL"] > 700:
+    print("\n")
+    print(f"Rever Demanda mensal. A demanda mensal de {estimativas.loc[localizacao, "DEMANDA_MENSAL"]} kWh está muito alta, limite máximo recomendado é 700 kWh")
 
-elif estimativas.loc[localizacao, 'DEMANDA_MENSAL'] < 200:
-    print('\n')
-    print(f'Rever Demanda mensal. A demanda mensal de {estimativas.loc[localizacao, 'DEMANDA_MENSAL']} kWh está muito baixa, limite mínimo recomendado é 200 kWh')
+elif estimativas.loc[localizacao, "DEMANDA_MENSAL"] < 200:
+    print("\n")
+    print(f"Rever Demanda mensal. A demanda mensal de {estimativas.loc[localizacao, "DEMANDA_MENSAL"]} kWh está muito baixa, limite mínimo recomendado é 200 kWh")
 
 
 
