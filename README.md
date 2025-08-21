@@ -4,9 +4,9 @@
 
 Este repositório estima a configuração ótima de um sistema fotovoltaico (PV) com base nos métodos e modelos descritos no artigo:
 
-"XXXX"
+"pending"
 
-DOI: [inserir DOI aqui]
+DOI: [pending]
 
 Para mais detalhes sobre a metodologia, premissas e validações, consulte a publicação original.
 
@@ -28,9 +28,9 @@ Considere entrar em contato com os autores ou mantenedores para oportunidades de
 
 This repository estimates the optimal PV system configuration based on the methods and models described in the article:
 
-"XXXX"
+"pending"
 
-DOI: [insert DOI here]
+DOI: [pending]
 
 For full details on methodology, assumptions, and validation, please consult the original publication.
 
